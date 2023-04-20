@@ -1,0 +1,2949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ZAP Scanning Report</title>
+<link
+	href="2023-04-19-ZAP-Report-/normalize/normalize.css" rel="stylesheet">
+<link
+	href="2023-04-19-ZAP-Report-/themes/original/main.css" rel="stylesheet">
+<link
+	href="2023-04-19-ZAP-Report-/themes/original/colors.css" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h1>ZAP Scanning Report</h1>
+		<p>
+			<span>Generated with</span> <a href="https://zaproxy.org"><img
+				src="2023-04-19-ZAP-Report-/zap32x32.png" alt="The ZAP logo" class="zap-logo">ZAP</a>
+			<span>on mer. 19 avr. 2023, at 21:42:26</span>
+		</p>
+	</header>
+
+	<main>
+
+		<section id="contents" class="contents">
+			<h2>Contents</h2>
+			<nav>
+				<ol>
+					<li><a
+						href="#about-this-report">About this report</a>
+						<ol>
+							
+							<li><a
+								href="#report-parameters">Report parameters</a></li>
+						</ol></li>
+					<data-th-block>
+					<li><a
+						href="#summaries">Summaries</a>
+						<ol>
+							<li><a
+								href="#risk-confidence-counts">Alert counts by risk and confidence</a></li>
+							<li><a
+								href="#site-risk-counts">Alert counts by site and risk</a></li>
+							<li><a
+								href="#alert-type-counts">Alert counts by alert type</a></li>
+						</ol></li>
+					<li><a
+						href="#alerts">Alerts</a>
+						<ol>
+							
+							 
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-2-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Moyen</span>, <span>Confidence</span>=<span
+									class="confidence-level">Haut</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Moyen</span>, <span>Confidence</span>=<span
+									class="confidence-level">Moyen</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-2-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Moyen</span>, <span>Confidence</span>=<span
+									class="confidence-level">Faible</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-1-confidence-3"><span>Risk</span>=<span
+									class="risk-level">Faible</span>, <span>Confidence</span>=<span
+									class="confidence-level">Haut</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Faible</span>, <span>Confidence</span>=<span
+									class="confidence-level">Moyen</span> <span>(4)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-1-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Faible</span>, <span>Confidence</span>=<span
+									class="confidence-level">Faible</span> <span>(1)</span></a></li>
+							  
+							
+							
+							
+							
+							
+							
+							<li><a
+								href="#alerts--risk-0-confidence-2"><span>Risk</span>=<span
+									class="risk-level">Pour information</span>, <span>Confidence</span>=<span
+									class="confidence-level">Moyen</span> <span>(1)</span></a></li>
+							
+							<li><a
+								href="#alerts--risk-0-confidence-1"><span>Risk</span>=<span
+									class="risk-level">Pour information</span>, <span>Confidence</span>=<span
+									class="confidence-level">Faible</span> <span>(1)</span></a></li>
+							  
+						</ol></li>
+					<li><a
+						href="#appendix">Appendix</a>
+						<ol>
+							<li><a
+								href="#alert-types">Alert types</a></li>
+						</ol></li>
+					</data-th-block>
+				</ol>
+			</nav>
+		</section>
+
+		<section
+			id="about-this-report" class="about-this-report">
+			<h2>About this report</h2>
+
+			
+
+			<section
+				id="report-parameters">
+				<h3>Report parameters</h3>
+				<div class="report-parameters--container">
+					<h4>Contexts</h4>
+					
+					
+					<p>No contexts were selected, so all contexts were included by default.</p>
+					  
+
+					<h4>Sites</h4>
+					
+					<p>The following sites were included:</p>
+					<ul class="sites-list">
+						<li><span class="site">http://127.0.0.1:8081</span></li>
+					</ul>
+					
+					<p>(If no sites were selected, all sites were included by default.)</p>
+					<p>An included site must also be within one of the included contexts for its data to be included in the report.</p>
+
+					<h4>Risk levels</h4>
+					<p>
+						<span>Included</span>:
+						 
+						<span class="included-risk-codes"><span class="risk-level">Haut</span>, <span class="risk-level">Moyen</span>, <span class="risk-level">Faible</span>, <span class="risk-level">Pour information</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						 <span>None</span>
+						
+					</p>
+
+					<h4>Confidence levels</h4>
+					<p>
+						<span>Included</span>:
+						
+						
+						<span class="included-confidence-codes"><span class="confidence-level">User Confirmed</span>, <span class="confidence-level">Haut</span>, <span class="confidence-level">Moyen</span>, <span class="confidence-level">Faible</span></span>
+					</p>
+					<p>
+						<span>Excluded</span>:
+						
+						
+						<span class="included-confidence-codes"> <span class="confidence-level">User Confirmed</span>, <span class="confidence-level">Haut</span>, <span class="confidence-level">Moyen</span>, <span class="confidence-level">Faible</span>, <span class="confidence-level">Faux positif</span></span>
+					</p>
+				</div>
+			</section>
+		</section>
+
+		
+		<section>
+			
+		</section>
+		
+		<section id="summaries" class="summaries">
+			<h2>Summaries</h2>
+
+			<section
+				id="risk-confidence-counts">
+				<h3>Alert counts by risk and confidence</h3>
+				<table class="risk-confidence-counts-table">
+					<caption>
+						<p>This table shows the number of alerts for each level of risk and confidence included in the report.</p>
+						<p>(The percentages in brackets represent the count as a percentage of the total number of alerts included in the report, rounded to one decimal place.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%"><col
+							style="width: 14.0%">
+						<col style="width: 14.0%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup"
+								colspan="5">Confidence</th>
+						</tr>
+						<tr>
+							<th scope="col">User Confirmed</th>
+							<th scope="col">Haut</th>
+							<th scope="col">Moyen</th>
+							<th scope="col">Faible</th>
+							<th scope="col">Total</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="5">Risk</th>
+							<th scope="row">Haut</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>0</span><br> <span class="additional-info-percentages">(0,0 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Moyen</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>3</span><br> <span class="additional-info-percentages">(27,3 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Faible</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>4</span><br> <span
+								class="additional-info-percentages">(36,4 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>6</span><br> <span class="additional-info-percentages">(54,5 %)</span></td>
+						</tr>
+						<tr>
+							
+							<th scope="row">Pour information</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+							<td><span>2</span><br> <span class="additional-info-percentages">(18,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row">Total</th>
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0,0 %)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(18,2 %)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(54,5 %)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(27,3 %)</span></td>
+							<td><span>11</span><br> <span
+								class="additional-info-percentages">(100%)</span></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="site-risk-counts">
+				<h3>Alert counts by site and risk</h3>
+				<table class="site-risk-counts-table">
+					<caption>
+						<p>This table shows, for each site for which one or more alerts were raised, the number of alerts raised at each risk level.</p>
+						<p>Alerts with a confidence level of &quot;False Positive&quot; have been excluded from these counts.</p>
+						<p>(The numbers in brackets are the number of alerts raised for the site at or above that risk level.)</p>
+					</caption>
+					<colgroup>
+						<col>
+						<col>
+					</colgroup>
+					<colgroup>
+						<col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%"><col
+							style="width: 16.25%">
+					</colgroup>
+					<thead>
+						<tr>
+							<td colspan="2" rowspan="2"></td>
+							<th scope="colgroup" colspan="4">Risk</th>
+						</tr>
+						<tr>
+							<th scope="col">
+								<span>Haut</span><br>  <span
+									class="additional-info-percentages">(= Haut)</span>  
+							</th>
+							<th scope="col">
+								<span>Moyen</span><br>   <span
+									class="additional-info-percentages">(&gt;= Moyen)</span> 
+							</th>
+							<th scope="col">
+								<span>Faible</span><br>   <span
+									class="additional-info-percentages">(&gt;= Faible)</span> 
+							</th>
+							<th scope="col">
+								<span>Pour information</span><br>   <span
+									class="additional-info-percentages">(&gt;= Pour information)</span> 
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="rowgroup"
+								rowspan="1">Site</th>
+							<th scope="row">http://127.0.0.1:8081</th>
+							
+							<td><span>0</span><br> <span
+								class="additional-info-percentages">(0)</span></td>
+							<td><span>3</span><br> <span
+								class="additional-info-percentages">(3)</span></td>
+							<td><span>6</span><br> <span
+								class="additional-info-percentages">(9)</span></td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(11)</span></td>
+							
+						</tr>
+					</tbody>
+				</table>
+			</section>
+
+			<section
+				id="alert-type-counts">
+				<h3>Alert counts by alert type</h3>
+				<table class="alert-type-counts-table">
+					<caption>
+						<p>This table shows the number of alerts of each alert type, together with the alert type&#39;s risk level.</p>
+						<p>(The percentages in brackets represent each count as a percentage, rounded to one decimal place, of the total number of alerts included in this report.)</p>
+					</caption>
+					<thead>
+						<tr>
+							<th scope="col">Alert type</th>
+							<th scope="col">Risk</th>
+							<th scope="col">Count</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-0">Absence de Jetons Anti-CSRF</a></th>
+							<td class="risk-level">Moyen</td>
+							<td><span>25</span><br> <span
+								class="additional-info-percentages">(227,3 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a></th>
+							<td class="risk-level">Moyen</td>
+							<td><span>25</span><br> <span
+								class="additional-info-percentages">(227,3 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-2">Missing Anti-clickjacking Header</a></th>
+							<td class="risk-level">Moyen</td>
+							<td><span>20</span><br> <span
+								class="additional-info-percentages">(181,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-3">Cookie No HttpOnly Flag</a></th>
+							<td class="risk-level">Faible</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(18,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-4">Cookie without SameSite Attribute</a></th>
+							<td class="risk-level">Faible</td>
+							<td><span>2</span><br> <span
+								class="additional-info-percentages">(18,2 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-5">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a></th>
+							<td class="risk-level">Faible</td>
+							<td><span>34</span><br> <span
+								class="additional-info-percentages">(309,1 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-6">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a></th>
+							<td class="risk-level">Faible</td>
+							<td><span>53</span><br> <span
+								class="additional-info-percentages">(481,8 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-7">Timestamp Disclosure - Unix</a></th>
+							<td class="risk-level">Faible</td>
+							<td><span>5</span><br> <span
+								class="additional-info-percentages">(45,5 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-8">X-Content-Type-Options Header Missing</a></th>
+							<td class="risk-level">Faible</td>
+							<td><span>34</span><br> <span
+								class="additional-info-percentages">(309,1 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-9">Information Disclosure - Sensitive Information in URL</a></th>
+							<td class="risk-level">Pour information</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+						</tr>
+						<tr>
+							<th scope="row"><a
+								href="#alert-type-10">User Controllable HTML Element Attribute (Potential XSS)</a></th>
+							<td class="risk-level">Pour information</td>
+							<td><span>1</span><br> <span
+								class="additional-info-percentages">(9,1 %)</span></td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<th scope="row">Total</th>
+							<td></td>
+							<td>11</td>
+						</tr>
+					</tfoot>
+				</table>
+			</section>
+		</section>
+
+		<section id="alerts" class="alerts">
+			<h2>Alerts</h2>
+			<ol>
+				
+				 
+				 
+				
+				
+				<li id="alerts--risk-2-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Moyen</span>, <span>Confidence</span>=<span
+							class="confidence-level">Haut</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-1">Content Security Policy (CSP) Header Not Set</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/robots.txt</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Content Security Policy (CSP) is an added layer of security that helps to detect and mitigate certain types of attacks, including Cross Site Scripting (XSS) and data injection attacks. These attacks are used for everything from data theft to site defacement or distribution of malware. CSP provides a set of standard HTTP headers that allow website owners to declare approved sources of content that browsers should be allowed to load on that page — covered types are JavaScript, CSS, HTML frames, fonts, images and embeddable objects such as Java applets, ActiveX, audio and video files.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (208 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/robots.txt HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (160 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 20 Apr 2023 01:31:35 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 284
+Content-Type: text/html; charset=iso-8859-1
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (284 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;404 Not Found&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Not Found&lt;/h1&gt;
+&lt;p&gt;The requested URL /robots.txt was not found on this server.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.7 (Ubuntu) Server at 127.0.0.1 Port 8081&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to set the Content-Security-Policy header.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Moyen</span>, <span>Confidence</span>=<span
+							class="confidence-level">Moyen</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-2">Missing Anti-clickjacking Header</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/11-Client-side_Testing/09-Testing_for_Clickjacking">WSTG-v42-CLNT-09</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The response does not include either Content-Security-Policy with &#39;frame-ancestors&#39; directive or X-Frame-Options to protect against &#39;ClickJacking&#39; attacks.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (198 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/ HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:35 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=k9275fatn12mseqt8fg3f7nei2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3246
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3246 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to WackoPicko&lt;/h2&gt;
+  &lt;p&gt;
+    On WackoPicko, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. WackoPicko is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if WackoPicko can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>X-Frame-Options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Modern Web browsers support the Content-Security-Policy and X-Frame-Options HTTP headers. Ensure one of them is set on all web pages returned by your site/app.</p>
+
+<p>If you expect the page to be framed only by pages on your server (e.g. it&#39;s part of a FRAMESET) then you&#39;ll want to use SAMEORIGIN, otherwise if you never expect the page to be framed, you should use DENY. Alternatively consider implementing Content Security Policy&#39;s &quot;frame-ancestors&quot; directive.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-2-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Moyen</span>, <span>Confidence</span>=<span
+							class="confidence-level">Faible</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-0">Absence de Jetons Anti-CSRF</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/05-Testing_for_Cross_Site_Request_Forgery">WSTG-v42-SESS-05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Aucun jetons Anti-CSRF n&#39;ont été trouvés dans un formulaire HTML.</p>
+
+<p>La contrefaçon de requête intersites (Cross Site Request Forgery - CSRF) est une attaque qui consiste à forcer une victime à envoyer une requête HTTP vers une destination cible, sans qu&#39;elle n&#39;en aie ni connaissance ni intention, afin d&#39;effectuer une action en se faisant passer pour la victime. La cause originelle est que les fonctionnalités de l&#39;application sont appelées à l&#39;aide d&#39;URL ou d&#39;actions de formulaires prévisibles et reproductibles. La nature de l&#39;attaque est que le CSRF exploite la confiance qu&#39;un site internet accorde à un utilisateur. En revanche, le cross-site scripting (XSS) exploite la confiance que l&#39;utilisateur porte à un site internet. Comme XSS, les attaques CSRF ne sont pas nécessairement multi-sites, mais elles peuvent l&#39;être. La contrefaçon de requête intersite est également connue sous les noms CSRF, XSRF, attaque en un clic (one-click attack), session riding, confused deputy et sea surf.</p>
+
+<p>Les attaques CSRF sont efficaces dans de nombreuses situations, notamment:</p>
+
+<p>* quand la victime a une session active sur le site cible.</p>
+
+<p>    * quand la victime est authentifiée via HTTP auth sur le site cible.</p>
+
+<p>    * quand la victime est sur le même réseau local que le site cible.</p>
+
+<p>CSRF a d&#39;abord été utilisée pour effectuer une action contre un site cible en utilisant les privilèges de la victime, mais des techniques récentes permettent d&#39;avoir accès à des renseignements en accédant à la réponse. Le risque de divulgation d&#39;informations est considérablement augmenté lorsque le site cible est vulnérable aux XSS, parce que XSS peut être utilisé comme une plateforme pour CSRF, permettant à l&#39;attaque d&#39;opérer dans les limites de la politique de même origine.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>Aucun jetons Anti-CSRF connus [anticsrf, CSRFToken, __RequestVerificationToken, csrfmiddlewaretoken, authenticity_token, OWASP_CSRFTOKEN, anoncsrf, csrf_token, _csrf, _csrfSecret, __csrf_magic, CSRF, _token, _csrf_token] n&#39;a été trouvé dans le formulaire HTML suivant: [Form 1: &quot;query2&quot; ].  </p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (198 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/ HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:34 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=ivfault8g2i5c6lo8p63h1fvi2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3246
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3246 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to WackoPicko&lt;/h2&gt;
+  &lt;p&gt;
+    On WackoPicko, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. WackoPicko is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if WackoPicko can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>&lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Phase: Architecture et Design</p>
+
+<p>Utilisez une librairie ou un framework approuvé qui ne permet pas cette vulnérabilité, ou qui contient des fonctionnalités permettant d&#39;éviter plus facilement cette vulnérabilité.</p>
+
+<p>Utilisez  par exemple des librairies anti-CSRF telles que CSRFGuard de l&#39;OWASP.</p>
+
+<p>Phase: Implémentation</p>
+
+<p>Assurez-vous que votre application soit exempte de problèmes de cross-site scripting, parce que la plupart des défenses contre le CSRF peuvent être contournées en utilisant des scripts contrôlés par le pirate.</p>
+
+<p>Phase: Architecture et Design</p>
+
+<p>Générez une valeur à usage unique pour chaque formulaire, placez-la dans le formulaire et vérifiez-la à la réception du formulaire. Assurez-vous que cette valeur unique ne soit pas prévisible (CWE-330).</p>
+
+<p>Notez que ceci peut aussi être contourné en utilisant XSS.</p>
+
+<p>Identifiez les opérations particulièrement dangereuses. Quand l&#39;utilisateur exécute une opération dangereuse, envoyez une requête de confirmation distincte pour vérifier que l&#39;utilisateur veut effectivement effectuer cette opération.</p>
+
+<p>Notez que ceci peut aussi être contourné en utilisant XSS.</p>
+
+<p>Utilisez la librairie de gestion de session ESAPI.</p>
+
+<p>Cette librairie comprend un composant pour le contrôle de CSRF.</p>
+
+<p>N&#39;utilisez pas la méthode GET pour les requêtes entraînant un changement d&#39;état.</p>
+
+<p>Phase: Implémentation</p>
+
+<p>Vérifiez l&#39;en-tête HTTP Referer pour voir si la requête provient d&#39;une page attendue. Ceci pourrait toutefois restreindre la fonctionnalité de l&#39;application, car les utilisateurs ou les serveurs proxy pourraient avoir désactivé le renvoi du HTTP Referer pour des raisons de confidentialité.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				<li id="alerts--risk-1-confidence-3">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Faible</span>, <span>Confidence</span>=<span
+							class="confidence-level">Haut</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-6">Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/sitemap.xml</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server">WSTG-v42-INFO-02</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The web/application server is leaking version information via the &quot;Server&quot; HTTP response header. Access to such information may facilitate attackers identifying other vulnerabilities your web/application server is subject to.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (209 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/sitemap.xml HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (160 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 404 Not Found
+Date: Thu, 20 Apr 2023 01:31:35 GMT
+Server: Apache/2.4.7 (Ubuntu)
+Content-Length: 285
+Content-Type: text/html; charset=iso-8859-1
+
+</code></pre>
+				
+				
+			</details> <details class="response-body" open="open">
+				<summary>Response body (285 bytes)</summary>
+				
+				<pre><code>&lt;!DOCTYPE HTML PUBLIC &quot;-//IETF//DTD HTML 2.0//EN&quot;&gt;
+&lt;html&gt;&lt;head&gt;
+&lt;title&gt;404 Not Found&lt;/title&gt;
+&lt;/head&gt;&lt;body&gt;
+&lt;h1&gt;Not Found&lt;/h1&gt;
+&lt;p&gt;The requested URL /sitemap.xml was not found on this server.&lt;/p&gt;
+&lt;hr&gt;
+&lt;address&gt;Apache/2.4.7 (Ubuntu) Server at 127.0.0.1 Port 8081&lt;/address&gt;
+&lt;/body&gt;&lt;/html&gt;
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Apache/2.4.7 (Ubuntu)</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress the &quot;Server&quot; header or provide generic details.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Faible</span>, <span>Confidence</span>=<span
+							class="confidence-level">Moyen</span> <span>(4)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(4)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-3">Cookie No HttpOnly Flag</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A cookie has been set without the HttpOnly flag, which means that the cookie can be accessed by JavaScript. If a malicious script can be run on this page then the cookie will be accessible and can be transmitted to another site. If this is a session cookie then session hijacking may be possible.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (198 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/ HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:34 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=ivfault8g2i5c6lo8p63h1fvi2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3246
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3246 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to WackoPicko&lt;/h2&gt;
+  &lt;p&gt;
+    On WackoPicko, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. WackoPicko is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if WackoPicko can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>PHPSESSID</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: PHPSESSID</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the HttpOnly flag is set for all cookies.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-4">Cookie without SameSite Attribute</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/06-Session_Management_Testing/02-Testing_for_Cookies_Attributes">WSTG-v42-SESS-02</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A5_2017-Broken_Access_Control.html">OWASP_2017_A05</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Un cookie a été définie sans les SameSite attribut, ce qui signifie que le cookie peut être envoyé en tant que résultat d&#39;un &#39;cross-site&#39; la demande. </p>
+
+<p>Le SameSite attribut est une lutte efficace contre mesure cross-site request forgery, cross-site inclusion de script, et le timing des attaques.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (198 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/ HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:34 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=ivfault8g2i5c6lo8p63h1fvi2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3246
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3246 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to WackoPicko&lt;/h2&gt;
+  &lt;p&gt;
+    On WackoPicko, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. WackoPicko is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if WackoPicko can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>PHPSESSID</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>Set-Cookie: PHPSESSID</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the SameSite attribute is set to either &#39;lax&#39; or ideally &#39;strict&#39; for all cookies.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-5">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-web-security-testing-guide/v42/4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework">WSTG-v42-INFO-08</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>Le web/serveur d&#39;application est une fuite de l&#39;information, via un ou plusieurs &quot;X-Powered-By&quot; têtes de réponse HTTP. L&#39;accès à ces informations peut faciliter les attaquants d&#39;identifier d&#39;autres frameworks/composants de votre application web est tributaire et les vulnérabilités de tels composants peuvent être soumis.</p>
+ </td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (198 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/ HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:34 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=ivfault8g2i5c6lo8p63h1fvi2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3246
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3246 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to WackoPicko&lt;/h2&gt;
+  &lt;p&gt;
+    On WackoPicko, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. WackoPicko is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if WackoPicko can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>X-Powered-By: PHP/5.5.9-1ubuntu4.29</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that your web server, application server, load balancer, etc. is configured to suppress &quot;X-Powered-By&quot; headers.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-8">X-Content-Type-Options Header Missing</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A05_2021-Security_Misconfiguration/">OWASP_2021_A05</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html">OWASP_2017_A06</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The Anti-MIME-Sniffing header X-Content-Type-Options was not set to &#39;nosniff&#39;. This allows older versions of Internet Explorer and Chrome to perform MIME-sniffing on the response body, potentially causing the response body to be interpreted and displayed as a content type other than the declared content type. Current (early 2014) and legacy versions of Firefox will use the declared content type (if one is set), rather than performing MIME-sniffing.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>This issue still applies to error type pages (401, 403, 500, etc.) as those pages are often still affected by injection issues, in which case there is still concern for browsers sniffing pages away from their actual content type.</p>
+
+<p>At &quot;High&quot; threshold this scan rule will not alert on client or server error responses.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (198 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/ HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (389 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:34 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Set-Cookie: PHPSESSID=ivfault8g2i5c6lo8p63h1fvi2; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 3246
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (3246 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;current&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;Welcome to WackoPicko&lt;/h2&gt;
+  &lt;p&gt;
+    On WackoPicko, you can share all your crazy pics with your friends. &lt;br /&gt;
+    But that&#39;s not all, you can also buy the rights to the high quality &lt;br /&gt;
+    version of someone&#39;s pictures. WackoPicko is fun for the whole family.
+  &lt;/p&gt;
+
+  &lt;h3&gt;New Here?&lt;/h3&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/register.php&quot;&gt;Create an account&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/users/sample.php?userid=1&quot;&gt;Check out a sample user!&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;&lt;a href=&quot;/calendar.php&quot;&gt;What is going on today?&lt;/a&gt;&lt;/h4&gt;
+  &lt;/p&gt;
+  &lt;p&gt;
+    &lt;h4&gt;Or you can test to see if WackoPicko can handle a file:&lt;/h4&gt; &lt;br /&gt;
+  &lt;script&gt;
+    document.write(&#39;&lt;form enctype=&quot;multipart/form-data&quot; action=&quot;/pic&#39; + &#39;check&#39; + &#39;.php&quot; method=&quot;POST&quot;&gt;&lt;input type=&quot;hidden&quot; name=&quot;MAX_FILE_SIZE&quot; value=&quot;30000&quot; /&gt;Check this file: &lt;input name=&quot;userfile&quot; type=&quot;file&quot; /&gt; &lt;br /&gt;With this name: &lt;input name=&quot;name&quot; type=&quot;text&quot; /&gt; &lt;br /&gt; &lt;br /&gt;&lt;input type=&quot;submit&quot; value=&quot;Send File&quot; /&gt;&lt;br /&gt; &lt;/form&gt;&#39;);
+  &lt;/script&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>X-Content-Type-Options</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ensure that the application/web server sets the Content-Type header appropriately, and that it sets the X-Content-Type-Options header to &#39;nosniff&#39; for all web pages.</p>
+
+<p>If possible, ensure that the end user uses a standards-compliant and modern web browser that does not perform MIME-sniffing at all, or that can be directed by the web application/web server to not perform MIME-sniffing.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-1-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Faible</span>, <span>Confidence</span>=<span
+							class="confidence-level">Faible</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-7">Timestamp Disclosure - Unix</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/calendar.php</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>A timestamp was disclosed by the application/web server - Unix</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>1682040695, which evaluates to: 2023-04-20 21:31:35</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (288 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/calendar.php HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+Referer: http://127.0.0.1:8081
+Cookie: PHPSESSID=7llunohs1udbc98lqo5j6hpdb1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (331 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:35 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 2434
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2434 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+  &lt;h2&gt;WackoPicko Calendar&lt;/h2&gt;
+  &lt;p&gt;
+   What is going on Thursday 20th of April 2023?
+  &lt;/p&gt;
+    &lt;p&gt;Nothing!&lt;/p&gt;
+    &lt;p&gt;
+    &lt;a href=&quot;/calendar.php?date=1682040695&quot;&gt;What about tomorrow?&lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   
+
+
+</code></pre>
+				
+				
+			</details></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>1682040695</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Vérifier manuellement que l&#39;horodatage des données n&#39;est pas sensible, et que les données ne peuvent pas être agrégés à divulguer des modèles exploitables.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+				 
+				
+				
+				
+				
+				<li id="alerts--risk-0-confidence-2">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Pour information</span>, <span>Confidence</span>=<span
+							class="confidence-level">Moyen</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-9">Information Disclosure - Sensitive Information in URL</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/users/sample.php?userid=1</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A01_2021-Broken_Access_Control/">OWASP_2021_A01</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A3_2017-Sensitive_Data_Exposure.html">OWASP_2017_A03</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>The request appeared to contain sensitive information leaked in the URL. This can violate PCI and most organizational compliance policies. You can configure the list of strings for this check to add or remove values specific to your environment.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>The URL contains potentially sensitive information. The following string was found via the pattern: user</p>
+
+<p>userid</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (301 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/users/sample.php?userid=1 HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+Referer: http://127.0.0.1:8081
+Cookie: PHPSESSID=7llunohs1udbc98lqo5j6hpdb1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (331 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:35 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 2543
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2543 bytes)</summary>
+				
+				<pre><code>
+
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   &lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+   &lt;h2&gt;These are Sample User&amp;#39;s Pictures: &lt;/h2&gt;   
+
+&lt;div class=&quot;column prepend-1 span-21 first last&quot; style=&quot;margin-bottom: 2em;&quot;&gt;
+      &lt;ul class=&quot;thumbnail-pic-list&quot;&gt;
+&lt;li&gt;
+&lt;a href=&quot;/pictures/view.php?picid=7&quot;&gt;&lt;img src=&quot;/upload/doggie/Dog.jpg.128_128.jpg&quot; height=&quot;128&quot; width=&quot;128&quot; /&gt;&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>userid</code></pre></td>
+	</tr>
+	
+	<tr>
+		<th scope="row">Evidence</th>
+		<td><pre><code>userid</code></pre></td>
+	</tr>
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Ne transmettez pas d&#39;informations sensibles dans les URIs.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				
+				<li id="alerts--risk-0-confidence-1">
+					<h3>
+						<span>Risk</span>=<span
+							class="risk-level">Pour information</span>, <span>Confidence</span>=<span
+							class="confidence-level">Faible</span> <span>(1)</span>
+					</h3>
+					<ol>
+						
+						<li class="alerts--site-li">
+							<h4>
+								<span class="site">http://127.0.0.1:8081</span> <span>(1)</span>
+							</h4>
+							<ol>
+								
+								<li>
+									<h5>
+										<a
+											href="#alert-type-10">User Controllable HTML Element Attribute (Potential XSS)</a> <span>(1)</span>
+									</h5>
+									<ol>
+										<li><details>
+												<summary>
+													<span class="request-method-n-url">GET http://127.0.0.1:8081/pictures/search.php?query=ZAP</span>
+												</summary>
+												
+<table class="alerts-table">
+	<tr>
+		<th scope="row">Alert tags</th>
+		<td>
+			<ul class="alert-tags-list">
+				<li>
+					<span><a href="https://owasp.org/Top10/A03_2021-Injection/">OWASP_2021_A03</a></span> 
+				</li>
+				<li>
+					<span><a href="https://owasp.org/www-project-top-ten/2017/A1_2017-Injection.html">OWASP_2017_A01</a></span> 
+				</li>
+			</ul>
+		</td>
+	</tr>
+	<tr>
+		<th scope="row">Alert description</th>
+		<td> 
+<p>This check looks at user-supplied input in query string parameters and POST data to identify where certain HTML attribute values might be controlled. This provides hot-spot detection for XSS (cross-site scripting) that will require further review by a security analyst to determine exploitability.</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Other info</th>
+		<td> 
+<p>User-controlled HTML attribute values were found. Try injecting special characters to see if XSS might be possible. The page at the following URL:</p>
+
+<p></p>
+
+<p>http://127.0.0.1:8081/pictures/search.php?query=ZAP</p>
+
+<p></p>
+
+<p>appears to include user input in: </p>
+
+<p></p>
+
+<p>a(n) [input] tag [value] attribute </p>
+
+<p></p>
+
+<p>The user input found was:</p>
+
+<p>query=ZAP</p>
+
+<p></p>
+
+<p>The user-controlled value was:</p>
+
+<p>zap</p>
+ </td>
+	</tr>
+	<tr>
+		<th scope="row">Request</th>
+		<td><details open="open">
+				<summary>Request line and header section (306 bytes)</summary>
+				
+				<pre><code>GET http://127.0.0.1:8081/pictures/search.php?query=ZAP HTTP/1.1
+Host: 127.0.0.1:8081
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:105.0) Gecko/20100101 Firefox/105.0
+Pragma: no-cache
+Cache-Control: no-cache
+Referer: http://127.0.0.1:8081/
+Cookie: PHPSESSID=7llunohs1udbc98lqo5j6hpdb1
+
+</code></pre>
+				
+				
+			</details> <details class="request-body" open="open">
+				<summary>Request body (0 bytes)</summary>
+				
+				<pre><code></code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Response</th>
+		<td><details open="open">
+				<summary>Status line and header section (331 bytes)</summary>
+				
+				<pre><code>HTTP/1.1 200 OK
+Date: Thu, 20 Apr 2023 01:31:37 GMT
+Server: Apache/2.4.7 (Ubuntu)
+X-Powered-By: PHP/5.5.9-1ubuntu4.29
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+Pragma: no-cache
+Vary: Accept-Encoding
+Content-Length: 2426
+Content-Type: text/html
+
+</code></pre>
+				
+				
+			</details> <details class="response-body">
+				<summary>Response body (2426 bytes)</summary>
+				
+				<pre><code>
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/screen.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/print.css&quot; type=&quot;text/css&quot; media=&quot;print&quot;&gt;
+    &lt;!--[if IE]&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;/css/blueprint/ie.css&quot; type=&quot;text/css&quot; media=&quot;screen, projection&quot;&gt;&lt;![endif]--&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/css/stylings.css&quot; type=&quot;text/css&quot; media=&quot;screen&quot;&gt;
+    &lt;title&gt;WackoPicko.com&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class=&quot;container &quot; style=&quot;border: 2px solid #5c95cf;&quot;&gt;
+      &lt;div class=&quot;column span-24 first last&quot;&gt;
+	&lt;h1 id=&quot;title&quot;&gt;&lt;a href=&quot;/&quot;&gt;WackoPicko.com&lt;/a&gt;&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;div id=&quot;menu&quot;&gt;
+	&lt;div class=&quot;column prepend-1 span-14 first&quot;&gt;
+	  &lt;ul class=&quot;menu&quot;&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/users/home.php&quot;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/upload.php&quot;&gt;&lt;span&gt;Upload&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+	    &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/pictures/recent.php&quot;&gt;&lt;span&gt;Recent&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li class=&quot;&quot;&gt;&lt;a href=&quot;/guestbook.php&quot;&gt;&lt;span&gt;Guestbook&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;column prepend-1 span-7 first last&quot;&gt;
+	  &lt;ul class=&quot;menu top_login&quot; &gt;
+      	    &lt;li&gt;&lt;a href=&quot;/users/login.php&quot;&gt;&lt;Span&gt;Login&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      	  &lt;/ul&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+
+
+
+      &lt;div class=&quot;column span-24 first last&quot; id=&quot;search_bar_blue&quot;&gt;
+	&lt;div class=&quot;column prepend-17 span-7 first last&quot; id=&quot;search_box&quot;&gt;
+	  &lt;form action=&quot;/pictures/search.php&quot; method=&quot;get&quot; style=&quot;display:inline;&quot;&gt;
+	    &lt;input id=&quot;query2&quot; name=&quot;query&quot; size=&quot;15&quot; style=&quot;padding: 2px; font-size: 16px; text-decoration:none;border:none;vertical-align:middle;&quot; type=&quot;text&quot; value=&quot;ZAP&quot;/&gt;
+	    &lt;input src=&quot;/images/search_button_white.gif&quot; type=&quot;image&quot; style=&quot;border: 0pt none ; position: relative; top: 0px;vertical-align:middle;margin-left: 1em;&quot; /&gt;
+	  &lt;/form&gt;
+	&lt;/div&gt;
+      &lt;/div&gt;
+   
+&lt;div class=&quot;column prepend-1 span-24 first last&quot;&gt;
+&lt;h2&gt;Pictures that are tagged as &#39;ZAP&#39;&lt;/h2&gt;
+
+   &lt;div class=&quot;column prepend-1 span-21 first last&quot; style=&quot;margin-bottom: 2em;&quot;&gt;
+      &lt;h3 class=&quot;error&quot;&gt;No pictures here...&lt;/h3&gt;
+
+
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+
+       &lt;div class=&quot;column span-24 first last&quot; id=&quot;footer&quot; &gt;
+	&lt;ul&gt;
+	  &lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;/admin/index.php?page=login&quot;&gt;Admin&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;mailto:contact@wackopicko.com&quot;&gt;Contact&lt;/a&gt; |&lt;/li&gt;
+	  &lt;li&gt;&lt;a href=&quot;/tos.php&quot;&gt;Terms of Service&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+   </code></pre>
+				
+				
+			</details></td>
+	</tr>
+	<tr>
+		<th scope="row">Parameter</th>
+		<td><pre><code>query</code></pre></td>
+	</tr>
+	
+	
+	<tr>
+		<th scope="row">Solution</th>
+		<td> 
+<p>Validate all input and sanitize output it before writing to any HTML attributes.</p>
+ </td>
+	</tr>
+</table>
+
+											</details></li>
+									</ol>
+								</li>
+								
+							</ol>
+						</li>
+						
+					</ol>
+				</li>
+				  
+			</ol>
+		</section>
+
+		<section id="appendix" class="appendix">
+			<h2>Appendix</h2>
+
+			<section id="alert-types" class="alert-types">
+				<h3>Alert types</h3>
+				<p class="alert-types-intro">This section contains additional information on the types of alerts in the report.</p>
+				<ol>
+					<li
+						id="alert-type-0">
+						<h4>Absence de Jetons Anti-CSRF</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10202/">Absence de Jetons Anti-CSRF</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/352.html">352</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>9</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/Cross-Site-Request-Forgery">http://projects.webappsec.org/Cross-Site-Request-Forgery</a></li>
+										<li><a
+											href="http://cwe.mitre.org/data/definitions/352.html">http://cwe.mitre.org/data/definitions/352.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-1">
+						<h4>Content Security Policy (CSP) Header Not Set</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10038/">Content Security Policy (CSP) Header Not Set</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy">https://developer.mozilla.org/en-US/docs/Web/Security/CSP/Introducing_Content_Security_Policy</a></li>
+										<li><a
+											href="https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html">https://cheatsheetseries.owasp.org/cheatsheets/Content_Security_Policy_Cheat_Sheet.html</a></li>
+										<li><a
+											href="http://www.w3.org/TR/CSP/">http://www.w3.org/TR/CSP/</a></li>
+										<li><a
+											href="http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html">http://w3c.github.io/webappsec/specs/content-security-policy/csp-specification.dev.html</a></li>
+										<li><a
+											href="http://www.html5rocks.com/en/tutorials/security/content-security-policy/">http://www.html5rocks.com/en/tutorials/security/content-security-policy/</a></li>
+										<li><a
+											href="http://caniuse.com/#feat=contentsecuritypolicy">http://caniuse.com/#feat=contentsecuritypolicy</a></li>
+										<li><a
+											href="http://content-security-policy.com/">http://content-security-policy.com/</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-2">
+						<h4>Missing Anti-clickjacking Header</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10020/">Anti-clickjacking Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1021.html">1021</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options">https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-3">
+						<h4>Cookie No HttpOnly Flag</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10010/">Cookie No HttpOnly Flag</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1004.html">1004</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://owasp.org/www-community/HttpOnly">https://owasp.org/www-community/HttpOnly</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-4">
+						<h4>Cookie without SameSite Attribute</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10054/">Cookie without SameSite Attribute</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/1275.html">1275</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site">https://tools.ietf.org/html/draft-ietf-httpbis-cookie-same-site</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-5">
+						<h4>Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10037/">Server Leaks Information via &quot;X-Powered-By&quot; HTTP Response Header Field(s)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a></li>
+										<li><a
+											href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-6">
+						<h4>Server Leaks Version Information via &quot;Server&quot; HTTP Response Header Field</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10036/">HTTP Server Response Header</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://httpd.apache.org/docs/current/mod/core.html#servertokens">http://httpd.apache.org/docs/current/mod/core.html#servertokens</a></li>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007">http://msdn.microsoft.com/en-us/library/ff648552.aspx#ht_urlscan_007</a></li>
+										<li><a
+											href="http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx">http://blogs.msdn.com/b/varunm/archive/2013/04/23/remove-unwanted-http-response-headers.aspx</a></li>
+										<li><a
+											href="http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html">http://www.troyhunt.com/2012/02/shhh-dont-let-your-response-headers.html</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-7">
+						<h4>Timestamp Disclosure - Unix</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10096/">Timestamp Disclosure</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://projects.webappsec.org/w/page/13246936/Information%20Leakage">http://projects.webappsec.org/w/page/13246936/Information%20Leakage</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-8">
+						<h4>X-Content-Type-Options Header Missing</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10021/">X-Content-Type-Options Header Missing</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/693.html">693</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>15</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx">http://msdn.microsoft.com/en-us/library/ie/gg622941%28v=vs.85%29.aspx</a></li>
+										<li><a
+											href="https://owasp.org/www-community/Security_Headers">https://owasp.org/www-community/Security_Headers</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+					<li
+						id="alert-type-9">
+						<h4>Information Disclosure - Sensitive Information in URL</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10024/">Information Disclosure - Sensitive Information in URL</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/200.html">200</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>13</td>
+							</tr>
+							
+						</table>
+					</li>
+					<li
+						id="alert-type-10">
+						<h4>User Controllable HTML Element Attribute (Potential XSS)</h4>
+						<table class="alert-types-table">
+							<tr>
+								<th scope="row">Source</th>
+								<td>
+									
+									   <span>raised by a passive scanner</span> <span>(<a
+										href="https://www.zaproxy.org/docs/alerts/10031/">User Controllable HTML Element Attribute (Potential XSS)</a>)
+									</span>   
+								</td>
+							</tr>
+							<tr>
+								<th scope="row">CWE ID</th>
+								<td><a
+									href="https://cwe.mitre.org/data/definitions/20.html">20</a></td>
+							</tr>
+							<tr>
+								<th scope="row">WASC ID</th>
+								<td>20</td>
+							</tr>
+							<tr>
+								<th scope="row">Reference</th>
+								<td>
+									<ol>
+										<li><a
+											href="http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute">http://websecuritytool.codeplex.com/wikipage?title=Checks#user-controlled-html-attribute</a></li>
+									</ol>
+								</td>
+							</tr>
+						</table>
+					</li>
+				</ol>
+			</section>
+		</section>
+		 
+	</main>
+</body>
+</html>
+
+
+
